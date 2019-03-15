@@ -2,7 +2,7 @@ FROM php:7.2-fpm
 
 # prerequisites 
 RUN apt-get update
-RUN apt-get install -y autoconf pkg-config libssl-dev zlib1g-dev libzip-dev
+RUN apt-get install -y autoconf pkg-config libssl-dev zlib1g-dev libzip-dev unzip
 
 # additional php ext
 RUN docker-php-ext-install bcmath
