@@ -8,6 +8,7 @@ RUN apt-get install -y autoconf pkg-config libssl-dev zlib1g-dev libzip-dev unzi
 RUN docker-php-ext-install bcmath
 RUN docker-php-ext-install zip
 RUN docker-php-ext-install gd
+RUN docker-php-ext-install intl
 
 # add mongodb support
 RUN pecl install mongodb
