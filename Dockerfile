@@ -3,6 +3,7 @@ FROM php:7.2-fpm
 # prerequisites 
 RUN apt-get update
 RUN apt-get install -y autoconf pkg-config libssl-dev zlib1g-dev libzip-dev unzip libpng-dev libjpeg-dev libgif-dev libtiff-dev 
+RUN apt-get install -y g++ libicu-dev icu-devtools
 
 # additional php ext
 RUN docker-php-ext-install bcmath
