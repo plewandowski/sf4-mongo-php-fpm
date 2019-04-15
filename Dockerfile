@@ -11,6 +11,11 @@ RUN docker-php-ext-install zip
 RUN docker-php-ext-install gd
 RUN docker-php-ext-install intl
 
+# image magic support
+RUN apt-get install -y libmagickwand-dev imagemagick
+RUN pecl install imagick
+RUN docker-php-ext-enable imagick 
+
 # add mongodb support
 RUN pecl install mongodb
 RUN echo "extension=mongodb.so" >> /usr/local/etc/php/conf.d/mongodb.ini
